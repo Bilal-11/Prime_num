@@ -12,11 +12,16 @@ int main()
     num[i] = i + 1;
   }
 
-  /*Setting d to 2*/
-  d = num[1];
-
-  /*Use elim function to eliminate multiples of d*/
-  elim(d,num);
+  /*Going to each non-zero entry and setting its multiples to zero*/
+  for(i=1 ;i<100; i++)
+  {
+    d = num[i];
+    if(d!=0)
+    {
+      /*Use elim function to eliminate multiples of d*/
+      elim(d,num);
+    }
+  }  
 
   /*Printing the array after processing (in the format of a 10 by 10 grid on the screen)*/
   for(i=0,j=1 ;i<100; i++,j++)
