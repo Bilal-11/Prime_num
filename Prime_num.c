@@ -21,18 +21,16 @@ int main()
       /*Use elim function to eliminate multiples of d*/
       elim(d,num);
     }
-  }  
+  }
 
-  /*Printing the array after processing (in the format of a 10 by 10 grid on the screen)*/
-  for(i=0,j=1 ;i<100; i++,j++)
+  /*Printing the prime numbers*/
+  for(i=0 ;i<100; i++)
   {
-    printf("%d\t",num[i]);
-    if(j == 10)
+    d = num[i];
+    if(d!=0)
     {
-      printf("\n");
-      j = 0;
+      printf("%d\n",d);
     }
-
   }
 
   return 0;
