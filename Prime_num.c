@@ -4,7 +4,7 @@
 
 int main()
 {
-  int i, num[100];
+  int i, j, d, num[100];
 
   /*Fill the array num with numbers from 1 to 100*/
   for(i=0 ;i<100; i++)
@@ -12,9 +12,26 @@ int main()
     num[i] = i + 1;
   }
 
-  for(i=0 ;i<100; i++)
+  /*Setting d to 2*/
+  d = num[1];
+
+  for(i=1 ;i<100; i++)
   {
-    prinf("%d\n",num[i]);
+    if(num[i]%d == 0 && num[i]!=d)
+    {
+      num[i] = 0;
+    }
+  }
+
+  for(i=0,j=1 ;i<100; i++,j++)
+  {
+    printf("%d\t",num[i]);
+    if(j == 10)
+    {
+      printf("\n");
+      j = 0;
+    }
+
   }
 
   return 0;
