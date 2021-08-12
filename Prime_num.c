@@ -1,7 +1,7 @@
 /*Program to print prime numbers between 1 and 100*/
 /*Author: Bilal, Date: 12/08/2021*/
 #include<stdio.h>
-
+#include "elim.c"
 int main()
 {
   int i, j, d, num[100];
@@ -15,14 +15,10 @@ int main()
   /*Setting d to 2*/
   d = num[1];
 
-  for(i=1 ;i<100; i++)
-  {
-    if(num[i]%d == 0 && num[i]!=d)
-    {
-      num[i] = 0;
-    }
-  }
+  /*Use elim function to eliminate multiples of d*/
+  elim(d,num);
 
+  /*Printing the array after processing (in the format of a 10 by 10 grid on the screen)*/
   for(i=0,j=1 ;i<100; i++,j++)
   {
     printf("%d\t",num[i]);
